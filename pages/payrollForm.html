@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/payrollForm.css">    
+    <script defer src="../js/pyrollForm.js"></script>
+    <script defer src="../js/EmployeePayroll.js"></script>
     <title>Employee payroll form</title>
 </head>
 <body>
@@ -20,7 +22,7 @@
     </header> 
     
     <div id="formId" class="form-content"></div>
-    <form class="form" action="#"  onreset="resetForm()" onsubmit="save(event)"> 
+    <form class="form" action="#"  onreset="resetForm()" onsubmit="save()"> 
     <div class="form-head"> Employee Payroll form</div>
 
      <!--UC2-->         
@@ -83,7 +85,7 @@
     <div class="row-content">
         <label class="label text" for="salary">Choose your salary:</label>
         <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
-        <output class="salary-output text" for="salary">400000</output>
+        <output class="salary-output" for="salary">400000</output>
     </div>
 
     <!--UC5-->
@@ -154,7 +156,7 @@
         <label class="label text" for="notes">Notes</label>
         <textarea id="notes" class="input" name="notes" placeholder="" style="height:100px"></textarea>
     </div>
-    <div class="button-content">
+    <div class="buttonParent">
         <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
         <div class="submit-reset">
         <button type="submit" class="button submitButton " id="submitButton">Submit</button>
@@ -163,6 +165,5 @@
     </div>
 </form>
 </div>
-
 </body>
 </html>

@@ -61,6 +61,7 @@ body {
     border: 1px solid #f5f5f5;
     border-radius: 8px;
     opacity: 1;
+    margin-left: 20px;
   }
   
   .form-head {
@@ -164,4 +165,58 @@ body {
   .cancelButton {
     text-decoration: none;
     text-align: center;
+  }
+
+  error-output {
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    text-align: right;
+    width: 20%;
+  }
+
+  @media only screen and (max-width: 960px) {
+    .cancelButton {
+      margin-left: 0px;
+    }
+    .form {
+      width: 85%;
+      padding: 44px 20px;
+    }
+    .profile-radio-content {
+      flex-flow: wrap;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .form {
+      margin-top: 10px;
+    }
+    .row {
+      flex-direction: column;
+    }
+    .uploadButton {
+      justify-content: flex-start;
+    }
+    .profile-radio-button {
+      flex-flow: wrap;
+    }
+    .submit-reset {
+      width: 100%;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .submitButton {
+      margin: 0;
+    }
+    .buttonParent {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+    .profile-radio-content {
+      flex-flow: wrap;
+    }
   }

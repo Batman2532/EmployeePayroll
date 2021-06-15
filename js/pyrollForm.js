@@ -48,6 +48,7 @@ const save = () => {
 
 const createEmployeePayroll = () => {
     let employeePayrollData = new EmployeePayrollData();
+    employeePayrollData.id = new Date().getTime();
     try{
         employeePayrollData.name=getInputValueById('#name');
     }catch(e){

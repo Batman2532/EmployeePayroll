@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 const save = () => {
     try{
-        setEmployeePayrollObject();
+        setEmployeePayrollObject(); 
         createAndUpdateStorage();
         resetForm();
         window.location.replace(site_properties.home_page);
@@ -113,7 +113,7 @@ const createAndUpdateStorage = () => {
     let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
     if(employeePayrollList){
         let empPayrollData = employeePayrollList.
-                             find(empData => empData._id == employeePayrollObj._id);
+                             find(empData => empData.id == employeePayrollObj._id);
         if (!empPayrollData) {
             employeePayrollList.push(createEmployeePayrollData());
         } else {

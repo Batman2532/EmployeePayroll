@@ -46,7 +46,7 @@ const createInnerHtml = () => {
     const remove = (node) => {
         let empPayrollData = empPayrollList.find(empData => empData._id == node._id)
         if(!empPayrollData) return;
-        const index = empPayrollList.map(empData => empData._id)
+        const index = empPayrollList.map(empData => empData.id)
                                      .indexOf(empPayrollData.id);
          empPayrollList.splice(index,1);
          localStorage.setItem("EmployeePayrollList",JSON.stringify(empPayrollList));

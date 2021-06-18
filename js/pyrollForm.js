@@ -121,7 +121,7 @@ const createAndUpdateStorage = () => {
                           .map(empData => empData.id)
                           .indexOf(empPayrollData._id);
             employeePayrollList.splice(index, 1, createEmployeePayrollData(empPayrollData._id));
-        }
+        }       
     } else{
         employeePayrollList = [createEmployeePayrollData()]
     }
